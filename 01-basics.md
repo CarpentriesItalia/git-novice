@@ -22,7 +22,7 @@ to keep track of what one person did and when.
 Even if you aren't collaborating with other people,
 automated version control is much better than this situation:
 
-!["notFinal.doc" by Jorge Cham, <https://www.phdcomics.com>](fig/phd101212s.png){alt='Comic: a PhD student sends "FINAL.doc" to their supervisor, but after several increasingly intense and frustrating rounds of comments and revisions they end up with a file named "FINAL_rev.22.comments49.corrections.10.#@$%WHYDIDCOMETOGRADSCHOOL????.doc"'}
+!["notFinal.doc" by Jorge Cham, https://www.phdcomics.com](fig/phd101212s.png){alt='Comic: a PhD student sends "FINAL.doc" to their supervisor, but after several increasingly intense and frustrating rounds of comments and revisions they end up with a file named "FINAL_rev.22.comments49.corrections.10.#@$%WHYDIDCOMETOGRADSCHOOL????.doc"'}
 
 We've all been in this situation before: it seems unnecessary to have
 multiple nearly-identical versions of the same document. Some word
@@ -47,7 +47,7 @@ sets of changes on the same document.
 
 ![](fig/versions.svg){alt='Different Versions Can be Saved'}
 
-Unless multiple users make changes to the same section of the document - a 
+Unless multiple users make changes to the same section of the document - a
 [conflict](../learners/reference.md#conflict) - you can
 incorporate two sets of changes into the same base document.
 
@@ -72,11 +72,10 @@ many large companies.
 However, many of these are now considered legacy systems (i.e., outdated) due to various
 limitations in their capabilities.
 More modern systems, such as Git and [Mercurial](https://swcarpentry.github.io/hg-novice/),
-are *distributed*, meaning that they do not need a centralized server to host the repository.
+are _distributed_, meaning that they do not need a centralized server to host the repository.
 These modern systems also include powerful merging tools that make it possible for
 multiple authors to work on
 the same files concurrently.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -85,7 +84,7 @@ the same files concurrently.
 ## Paper Writing
 
 - Imagine you drafted an excellent paragraph for a paper you are writing, but later ruin
-  it. How would you retrieve the *excellent* version of your conclusion? Is it even possible?
+  it. How would you retrieve the _excellent_ version of your conclusion? Is it even possible?
 
 - Imagine you have 5 co-authors. How would you manage the changes and comments
   they make to your paper?  If you use LibreOffice Writer or Microsoft Word, what happens if
@@ -112,8 +111,6 @@ the same files concurrently.
   merged into the rest of the document. Even online word processors like
   Google Docs or Microsoft Office Online do not fully resolve these
   problems.
-  
-  
 
 :::::::::::::::::::::::::
 
@@ -125,5 +122,3 @@ the same files concurrently.
 - Version control also allows many people to work in parallel.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-

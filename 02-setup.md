@@ -50,7 +50,6 @@ For this lesson, we will be interacting with [GitHub](https://github.com/) and s
 
 If you elect to use a private email address with GitHub, then use that same email address for the `user.email` value, e.g. `username@users.noreply.github.com` replacing `username` with your GitHub one.
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -86,23 +85,23 @@ $ git config --global core.autocrlf true
 
 Dracula also has to set his favorite text editor, following this table:
 
-| Editor                                | Configuration command | 
-| :-----------                          | :------------------------------ |
-| Atom                                  | `$ git config --global core.editor "atom --wait"`                      | 
-| nano                                  | `$ git config --global core.editor "nano -w"`                      | 
-| BBEdit (Mac, with command line tools) | `$ git config --global core.editor "bbedit -w"`                      | 
-| Sublime Text (Mac)                    | `$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"`                      | 
-| Sublime Text (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"`                      | 
-| Sublime Text (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"`                      | 
-| Notepad (Win)                         | `$ git config --global core.editor "c:/Windows/System32/notepad.exe"`                      | 
-| Notepad++ (Win, 32-bit install)       | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`                      | 
-| Notepad++ (Win, 64-bit install)       | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`                      | 
-| Kate (Linux)                          | `$ git config --global core.editor "kate"`                      | 
-| Gedit (Linux)                         | `$ git config --global core.editor "gedit --wait --new-window"`                      | 
-| Scratch (Linux)                       | `$ git config --global core.editor "scratch-text-editor"`                      | 
-| Emacs                                 | `$ git config --global core.editor "emacs"`                      | 
-| Vim                                   | `$ git config --global core.editor "vim"`                      | 
-| VS Code                               | `$ git config --global core.editor "code --wait"`                      | 
+| Editor                                                   | Configuration command                                                                                                            |
+| :------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
+| Atom                                                     | `$ git config --global core.editor "atom --wait"`                                                                                |
+| nano                                                     | `$ git config --global core.editor "nano -w"`                                                                                    |
+| BBEdit (Mac, with command line tools) | `$ git config --global core.editor "bbedit -w"`                                                                                  |
+| Sublime Text (Mac)                    | `$ git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"`                      |
+| Sublime Text (Win, 32-bit install)    | `$ git config --global core.editor "'c:/program files (x86)/sublime text 3/sublime_text.exe' -w"`                                |
+| Sublime Text (Win, 64-bit install)    | `$ git config --global core.editor "'c:/program files/sublime text 3/sublime_text.exe' -w"`                                      |
+| Notepad (Win)                         | `$ git config --global core.editor "c:/Windows/System32/notepad.exe"`                                                            |
+| Notepad++ (Win, 32-bit install)       | `$ git config --global core.editor "'c:/program files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"` |
+| Notepad++ (Win, 64-bit install)       | `$ git config --global core.editor "'c:/program files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"`       |
+| Kate (Linux)                          | `$ git config --global core.editor "kate"`                                                                                       |
+| Gedit (Linux)                         | `$ git config --global core.editor "gedit --wait --new-window"`                                                                  |
+| Scratch (Linux)                       | `$ git config --global core.editor "scratch-text-editor"`                                                                        |
+| Emacs                                                    | `$ git config --global core.editor "emacs"`                                                                                      |
+| Vim                                                      | `$ git config --global core.editor "vim"`                                                                                        |
+| VS Code                                                  | `$ git config --global core.editor "code --wait"`                                                                                |
 
 It is possible to reconfigure the text editor for Git whenever you want to change it.
 
@@ -113,7 +112,6 @@ It is possible to reconfigure the text editor for Git whenever you want to chang
 Note that Vim is the default editor for many programs. If you haven't used Vim before and wish to exit a session without saving
 your changes, press <kbd>Esc</kbd> then type `:q!` and hit <kbd>Enter</kbd> or <kbd>↵</kbd> or on Macs, <kbd>Return</kbd>.
 If you want to save your changes and quit, press <kbd>Esc</kbd> then type `:wq` and hit <kbd>Enter</kbd> or <kbd>↵</kbd> or on Macs, <kbd>Return</kbd>.
-
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -130,7 +128,7 @@ $ git config --global init.defaultBranch main
 ## Default Git branch naming
 
 Source file changes are associated with a "branch."
-For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.  
+For new learners in this lesson, it's enough to know that branches exist, and this lesson uses one branch.\
 By default, Git will create a branch called `master`
 when you create a new repository with `git init` (as explained in the next Episode). This term evokes
 the racist practice of human slavery and the
@@ -215,11 +213,8 @@ $ git help
 
 [git-privacy]: https://help.github.com/articles/keeping-your-email-address-private/
 
-
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `git config` with the `--global` option to configure a user name, email address, editor, and other preferences once per machine.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
