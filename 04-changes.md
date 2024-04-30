@@ -136,7 +136,7 @@ If we just run `git commit` without the `-m` option,
 Git will launch `nano` (or whatever other editor we configured as `core.editor`)
 so that we can write a longer message.
 
-[Good commit messages][commit-messages] start with a brief (<50 characters) statement about the
+[Good commit messages][commit-messages] start with a brief (\<50 characters) statement about the
 changes made in the commit. Generally, the message should complete the sentence "If applied, this commit will" <commit message here>.
 If you want to go into more detail, add a blank line between the summary line and your additional notes. Use this additional space to explain why you made changes and/or what their impact will be.
 
@@ -616,26 +616,19 @@ Which command(s) below would save the changes of `myfile.txt`
 to my local Git repository?
 
 1. ```bash
+   $ git commit -m "my recent changes"
    ```
-
-$ git commit -m "my recent changes"
-
-````
 2. ```bash
-$ git init myfile.txt
-$ git commit -m "my recent changes"
-````
-
-3. ```bash
+   $ git init myfile.txt
+   $ git commit -m "my recent changes"
    ```
-
-$ git add myfile.txt
-$ git commit -m "my recent changes"
-
-````
+3. ```bash
+   $ git add myfile.txt
+   $ git commit -m "my recent changes"
+   ```
 4. ```bash
-$ git commit -m myfile.txt "my recent changes"
-````
+   $ git commit -m myfile.txt "my recent changes"
+   ```
 
 :::::::::::::::  solution
 
@@ -779,7 +772,6 @@ $ git diff me.txt
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [commit-messages]: https://chris.beams.io/posts/git-commit/
-
 [git-references]: https://git-scm.com/book/en/v2/Git-Internals-Git-References
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
