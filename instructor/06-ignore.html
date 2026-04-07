@@ -21,8 +21,7 @@
         <img id="swc-logo" alt="Software Carpentry" src="../assets/images/software-logo.svg"></div>
     </div>
     <div class="selector-container">
-      <div id="theme-selector">
-        <li class="nav-item dropdown" id="theme-button-list">
+      <menu class="theme-selector" id="theme-selector-menu"><li class="nav-item dropdown theme-button-list" id="theme-button-list-menu">
           <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
             <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><i data-feather="chevron-down"></i>
           </button>
@@ -45,10 +44,7 @@
                 <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
             </li>
           </ul></li>
-      </div>
-
-
-      <div class="dropdown" id="instructor-dropdown">
+    </menu><div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
         </button>
@@ -105,15 +101,11 @@
     -->
     <a id="search-button" class="btn btn-primary" href="../instructor/aio.html" role="button" aria-label="Search the All In One page">Search the All In One page</a>
   </div><!--/div.container-fluid -->
-</nav><div class="col-md-12 mobile-title">
-  Version Control with Git
-</div>
-
-<aside class="col-md-12 lesson-progress"><div style="width: 34%" class="percentage">
+</nav><aside class="col-md-12 lesson-progress"><div style="width: 34%" class="percentage">
     34%
   </div>
   <div class="progress software">
-    <div class="progress-bar software" role="progressbar" style="width: 34%" aria-valuenow="34" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar software" role="progressbar" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="34" style="width: 34%">
     </div>
   </div>
 </aside><div class="container">
@@ -121,13 +113,12 @@
         <!-- START: inst/pkgdown/templates/navbar.html -->
 <div id="sidebar-col" class="col-lg-4">
   <div id="sidebar" class="sidebar">
-      <nav aria-labelledby="flush-headingEleven"><button role="button" aria-label="close menu" alt="close menu" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
+      <nav aria-labelledby="flush-collapse-chapters-toggle"><button role="button" aria-label="Collapse" alt="Collapse" aria-expanded="true" aria-controls="sidebar" class="collapse-toggle" data-collapse="Collapse " data-episodes="Episodes ">
           <i class="search-icon" data-feather="x" role="img"></i>
         </button>
         <div class="sidebar-inner">
           <div class="row mobile-row" id="theme-row-mobile">
-            <div class="col" id="theme-selector">
-              <li class="nav-item dropdown" id="theme-button-list">
+            <menu class="col theme-selector" id="theme-selector-sidebar"><li class="nav-item dropdown theme-button-list" id="theme-button-list-sidebar">
                 <button class="btn btn-link nav-link px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg><span class="d-lg-none ms-1" id="bd-theme-text">Toggle Theme</span>
                 </button>
@@ -150,19 +141,18 @@
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg></button>
                   </li>
                 </ul></li>
-            </div>
-          </div>
+            </menu></div>
           <div class="row mobile-row">
             <div class="col">
               <div class="sidenav-view-selector">
-                <div class="accordion accordion-flush" id="accordionFlush9">
+                <div class="accordion accordion-flush" id="accordion-instructor-toggle">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingNine">
-                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                    <h2 class="accordion-header" id="flush-heading-instructor-toggle">
+                      <button class="accordion-button collapsed" id="instructor" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-instructor-toggle" aria-expanded="false" aria-controls="flush-collapse-instructor-toggle">
                         <i id="eye" aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View
                       </button>
                     </h2>
-                    <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlush2">
+                    <div id="flush-collapse-instructor-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-instructor-toggle">
                       <div class="accordion-body">
                         <a href="../06-ignore.html">Learner View</a>
                       </div>
@@ -174,15 +164,15 @@
 
             <hr></div><!--/div.mobile-row -->
 
-          <div class="accordion accordion-flush" id="accordionFlush11">
+          <div class="accordion accordion-flush" id="accordion-chapters-toggle">
             <div class="accordion-item">
 
-              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
-                <h2 class="accordion-header chapters" id="flush-headingEleven">
+              <button id="chapters" class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-chapters-toggle" aria-expanded="false" aria-controls="flush-collapse-chapters-toggle">
+                <h2 class="accordion-header chapters" id="flush-heading-chapters-toggle">
                   EPISODES
                 </h2>
               </button>
-              <div id="flush-collapseEleven" class="accordion-collapse show collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlush11">
+              <div id="flush-collapse-chapters-toggle" class="accordion-collapse show collapse" data-bs-parent="#accordion-chapters-toggle">
 
                 <div class="accordion-body">
                   <div class="accordion accordion-flush" id="accordionFlush1">
@@ -328,14 +318,14 @@
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordion-resources-toggle">
               <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                <h2 class="accordion-header" id="flush-heading-resources-toggle">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-resources-toggle" aria-expanded="false" aria-controls="flush-collapse-resources-toggle">
                     RESOURCES
                   </button>
                 </h2>
-                <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlush12">
+                <div id="flush-collapse-resources-toggle" class="accordion-collapse collapse" data-bs-parent="#accordion-resources-toggle">
                   <div class="accordion-body">
                     <ul><li>
                         <a href="../instructor/key-points.html">Key Points</a>
@@ -365,7 +355,7 @@
 
         <!-- START: inst/pkgdown/templates/content-instructor.html -->
   <div class="col-xl-8 col-lg-12 primary-content">
-    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+    <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter Top"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/05-history.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/07-github.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -424,14 +414,14 @@ data analysis? Let’s create a few dummy files:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> mkdir results</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="ex">$</span> touch a.csv b.csv c.csv results/a.out results/b.out</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">$</span> mkdir results</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a><span class="ex">$</span> touch a.csv b.csv c.csv results/a.out results/b.out</span></code></pre>
 </div>
 <p>and see what Git says:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -455,8 +445,8 @@ called <code>.gitignore</code>:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">$</span> nano .gitignore</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="ex">$</span> cat .gitignore</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="ex">$</span> nano .gitignore</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="ex">$</span> cat .gitignore</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -473,7 +463,7 @@ is much cleaner:</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -494,9 +484,9 @@ ignore the same things that we’re ignoring. Let’s add and commit
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> git add .gitignore</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Ignore data files and the results folder"</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="ex">$</span> git status</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">$</span> git add .gitignore</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">"Ignore data files and the results folder"</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="ex">$</span> git status</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -509,7 +499,7 @@ adding files to the repository that we don’t want to track:</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">$</span> git add a.csv</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="ex">$</span> git add a.csv</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -525,7 +515,7 @@ ignored files if we want:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> git status <span class="at">--ignored</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">$</span> git status <span class="at">--ignored</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -553,8 +543,8 @@ nothing to commit, working tree clean</code></pre>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">results/data</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="ex">results/plots</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">results/data</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="ex">results/plots</span></span></code></pre>
 </div>
 <p>How would you ignore only <code>results/plots</code> and not
 <code>results/data</code>?</p>
@@ -639,10 +629,10 @@ Files exercise, but with a slightly different directory structure:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">results/data</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="ex">results/images</span></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="ex">results/plots</span></span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a><span class="ex">results/analysis</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="ex">results/data</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="ex">results/images</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="ex">results/plots</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a><span class="ex">results/analysis</span></span></code></pre>
 </div>
 <p>How would you ignore all of the contents in the results folder, but
 not <code>results/data</code>?</p>
@@ -686,11 +676,11 @@ structure that looks like:</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">results/data/position/gps/a.csv</span></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="ex">results/data/position/gps/b.csv</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a><span class="ex">results/data/position/gps/c.csv</span></span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a><span class="ex">results/data/position/gps/info.txt</span></span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="ex">results/plots</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="ex">results/data/position/gps/a.csv</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="ex">results/data/position/gps/b.csv</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a><span class="ex">results/data/position/gps/c.csv</span></span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a><span class="ex">results/data/position/gps/info.txt</span></span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a><span class="ex">results/plots</span></span></code></pre>
 </div>
 <p>What’s the shortest <code>.gitignore</code> rule you could write to
 ignore all <code>.csv</code> files in
@@ -727,10 +717,10 @@ subdirectories of your repository. For example, you might have:</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">results/a.csv</span></span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="ex">data/experiment_1/b.csv</span></span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a><span class="ex">data/experiment_2/c.csv</span></span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="ex">data/experiment_2/variation_1/d.csv</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="ex">results/a.csv</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a><span class="ex">data/experiment_1/b.csv</span></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a><span class="ex">data/experiment_2/c.csv</span></span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a><span class="ex">data/experiment_2/variation_1/d.csv</span></span></code></pre>
 </div>
 <p>How do you ignore all the <code>.csv</code> files, without explicitly
 listing the names of the corresponding folders?</p>
@@ -769,8 +759,8 @@ exception with the exclamation point operator.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">*.csv</span></span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="ex">!*.csv</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="ex">*.csv</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="ex">!*.csv</span></span></code></pre>
 </div>
 <p>What will be the result?</p>
 </div>
@@ -849,7 +839,7 @@ ignore.</li>
 
 
       </div> <!-- / div.lesson-content -->
-    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
+    </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter Bottom"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/05-history.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/07-github.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
@@ -909,7 +899,7 @@ ignore.</li>
   "identifier": "https://swcarpentry.github.io/git-novice/instructor/06-ignore.html",
   "dateCreated": "2014-12-04",
   "dateModified": "2024-02-27",
-  "datePublished": "2026-03-31"
+  "datePublished": "2026-04-07"
 }
 
   </script><script>
